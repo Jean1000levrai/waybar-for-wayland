@@ -1,0 +1,113 @@
+{
+    "layer": "bottom",
+    "spacing": 0,
+    "height": 43,
+
+    "margin-top": 8,
+    "margin-right": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+
+    "modules-left": [
+        "custom/apps",
+        "custom/firefox",
+        "custom/discord",
+        "custom/file", 
+        "custom/code"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "custom/ip",
+        "pulseaudio",
+        "clock",
+        "custom/power_button"
+    ],
+
+
+    "custom/power_button": {
+        "format": "",
+        "tooltip": "Power Menu",
+        "on-click": "~/.config/waybar/scripts/power-menu.sh"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false,
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+          "urgent": "",
+          "default": ""
+        },
+        "sort-by-number": true
+    },
+
+    "clock": {
+        //"format": "{:%I:%M %p - %a, %d %b %Y}",
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+    "custom/ip": {
+        "exec": "~/.config/waybar/scripts/ip.sh",
+        "interval": 10,
+        "return-type": "json",
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi" : "  ",
+        "format-ethernet": "   {ipaddr}",
+        "format-disconnected" : "no network",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": " {icon} {volume}%",
+        "format-bluetooth": "  ",
+        "nospacing": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false,
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+    "custom/apps": {
+        "format":"Apps",
+        "on-click":"wofi -show drun ",
+        "tooltip":false
+    },
+
+    "custom/discord": {
+        "format":"  ",
+        "on-click":"discord",
+        "tooltip":false
+    },
+
+    "custom/firefox": {
+        "format":"  ",
+        "on-click":"firefox",
+        "tooltip":false
+    },
+    "custom/file": {
+        "format":"  ",
+        "on-click":"nemo",
+        "tooltip":false
+    },
+    "custom/code": {
+        "format":"  ",
+        "on-click":"code",
+        "tooltip":false
+    }    
+
+
+}

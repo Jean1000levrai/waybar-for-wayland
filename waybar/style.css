@@ -1,0 +1,161 @@
+
+/*------------------------------------------------*
+ * generals                                       *
+ *------------------------------------------------*/
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: Roboto;
+}
+
+window#waybar {
+background-color: rgba(0,0,0,0.2);
+    border-bottom: 0px solid #ffffff;
+    /* color: #FFFFFF; */
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/*------------------------------------------------*
+ * Workspace                                      *
+ *------------------------------------------------*/
+
+ #workspaces {
+    margin: 5px 1px 6px 1px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 4px 3px;
+    border-radius: 15px;
+    border: 0px;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background: #ffffff;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    background: #ffffff;
+    border-radius: 15px;
+}
+
+/*------------------------------------------------*
+ * clock                                          *
+ *------------------------------------------------*/
+
+ #clock {
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 10px 15px 10px 0px;
+    font-weight: bold;
+}
+
+/*------------------------------------------------*
+ * audio                                          *
+ *------------------------------------------------*/
+
+#pulseaudio {
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 10px 15px 10px 0px;
+    font-weight: bold;
+}
+
+/*------------------------------------------------*
+ * network                                        *
+ *------------------------------------------------*/
+
+ #custom-ip{
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 10px 15px 10px 0px;
+    font-weight: bold;
+}
+
+#network{
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 10px 15px 10px 0px;
+    font-weight: bold;
+}
+
+#network.ethernet {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#network.wifi {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/*------------------------------------------------*
+ * power button                                   *
+ *------------------------------------------------*/
+
+#custom-power_button{
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 10px 15px 10px 0px;
+    font-weight: bold; 
+}
+
+/*------------------------------------------------*
+ * apps button                                   *
+ *------------------------------------------------*/
+
+#custom-apps{
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 10px 15px 10px 0px; 
+    font-weight: bold;
+}
+
+#custom-firefox, #custom-discord, #custom-file, #custom-code{
+    background-color:transparent;
+    font-size: 16px;
+    color: #ffffff;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
