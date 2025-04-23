@@ -31,7 +31,7 @@
     "custom/power_button": {
         "format": "",
         "tooltip": "Power Menu",
-        "on-click": "~/.config/waybar/scripts/power-menu.sh"
+        "on-click": "~/.config/waybar/scripts/wlogout.sh"
     },
 
     "hyprland/workspaces": {
@@ -42,15 +42,35 @@
         "on-click": "activate",
         "format-icons": {
           "urgent": "",
-          "default": ""
+          "default": ""
         },
         "sort-by-number": true
     },
 
     "clock": {
-        //"format": "{:%I:%M %p - %a, %d %b %Y}",
-        "format": "{:%H:%M}",
-        "tooltip": false
+        "format": "{:%H:%M} ",
+        "format-alt": "{:%A, %B %d, %Y (%R  )}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
     },
 
     "custom/ip": {
@@ -83,7 +103,8 @@
     },
     "custom/apps": {
         "format":"Apps",
-        "on-click":"wofi -show drun ",
+        "on-click":"wofi -show drun --style ~/.config/wofi/style.css",
+        "on-click-right": "killall wofi",
         "tooltip":false
     },
 
