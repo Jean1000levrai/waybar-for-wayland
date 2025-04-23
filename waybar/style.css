@@ -20,8 +20,8 @@ background-color: rgba(0,0,0,0.2);
 /*------------------------------------------------*
  * Workspace                                      *
  *------------------------------------------------*/
-
- #workspaces {
+/*
+#workspaces {
     margin: 5px 1px 6px 1px;
     padding: 0px 1px;
     border-radius: 15px;
@@ -52,6 +52,45 @@ background-color: rgba(0,0,0,0.2);
     background: #ffffff;
     border-radius: 15px;
 }
+*/
+#workspaces {
+    background: #131313; /* Dark base */
+    margin: 5px 5px 5px 5px;
+    padding: 4px 1px;
+    border-radius: 12px;
+    font-weight: normal;
+    font-style: normal;
+    opacity: 0.95;
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    margin: 0px 3px;
+    border-radius: 12px;
+    color: #ffffff; /* Light text */
+    background-color: #303030; /* Surface0 */
+    transition: all 0.3s ease-in-out;
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+#workspaces button.active {
+    color: #131313; /* Base for contrast */
+    background: #ffffff; /* Text-like white */
+    border-radius: 10px;
+    min-width: 30px;
+    opacity: 1.0;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    color: #131313; /* Contrast text */
+    background: #ffffff; /* Highlight */
+    border-radius: 10px;
+    min-width: 30px;
+    opacity: 0.9;
+}
+
 
 /*------------------------------------------------*
  * clock                                          *
