@@ -1,0 +1,93 @@
+@define-color mauve     @color9;
+@define-color red       @color9;
+@define-color lavender  @color7;
+@define-color text      @color7;
+@define-color bg        @background;
+
+@keyframes fadeIn {
+    0% {}
+    100% {}
+}
+
+* {
+    all: unset;
+    font-family: 'CodeNewRoman Nerd Font Mono', monospace;
+    font-size: 18px;
+    text-shadow: none;
+    background-color: #1a1a1a;
+}
+
+window {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: alpha(@bg, 0.6);
+}
+
+#outer-box,
+#inner-box,
+#scroll,
+#entry,
+#input,
+#input image,
+#entry arrow,
+#input *,
+#text {
+    border: none;
+    outline: none;
+}
+
+#inner-box {
+    margin: 2px;
+    padding: 5px;
+}
+
+#scroll {
+    padding: 30px;
+}
+
+#input {
+    margin: 20px;
+    padding: 20px;
+    color: @text;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: alpha(@bg, 0.2);
+}
+
+#input image {
+    color: @red;
+    padding-right: 10px;
+}
+
+#input:focus {
+    border-radius: 10px;
+}
+
+#text {
+    margin: 5px;
+    color: @text;
+}
+
+#entry {
+    margin: 5px;
+    padding: 10px;
+    transition: background 0.2s ease;
+    border-radius: 8px;
+}
+
+#entry arrow {
+    color: @lavender;
+}
+
+#entry:selected {
+    background-color: alpha(@mauve, 0.2);
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.05);
+}
+
+#entry:selected #text {
+    color: @mauve;
+}
+
+#entry:drop(active) {
+    background-color: @lavender !important;
+}
