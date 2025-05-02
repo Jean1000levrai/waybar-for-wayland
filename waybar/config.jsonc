@@ -115,13 +115,13 @@
     },
 
     "custom/firefox": {
-        "format":"  ",
+        "format":"  ",
         "on-click":"firefox",
         "tooltip":false
     },
     "custom/file": {
         "format":"  ",
-        "on-click":"nemo",
+        "on-click":"nautilus",
         "tooltip":false
     },
     "custom/code": {

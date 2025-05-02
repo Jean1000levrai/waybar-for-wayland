@@ -6,13 +6,13 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: Roboto;
+    font-family: "Roboto", "Font Awesome 6 Free";
 }
 
 window#waybar {
-background-color: rgba(0,0,0,0.2);
+background-color: rgba(0,0,0,0);
     border-bottom: 0px solid #ffffff;
-    /* color: #FFFFFF; */
+    color: #FFFFFF;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -85,7 +85,7 @@ background-color: rgba(0,0,0,0.2);
 
 #workspaces button:hover {
     color: #131313;
-    background: #ffffff; 
+    background: #ffffff;
     border-radius: 10px;
     min-width: 30px;
     opacity: 0.9;
